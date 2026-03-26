@@ -1,0 +1,407 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(222, 222, 211);
+      color: #000000;
+
+}
+
+nav {
+  background-color: rgb(227, 227, 219);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px;
+
+}
+
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color:#555
+}
+#theme-btn {
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+
+.nav-logo img {
+    width: 56px;
+    height: 56px;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.links a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight:800;
+}
+
+.hero {
+    display: flex;
+    min-height: 100vh;
+    margin: auto;
+    padding-top: 76px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.hero1 {
+    padding: 10px;
+    text-align: center;
+    gap: 2px;
+    max-width: 700px;
+}
+
+.hero h1{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.hero p {
+    margin: 15px 0px;
+}
+
+.central-buttons {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.central-button {
+    transition: transform 0.3s ease;
+    padding: 14px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.central-button:hover {
+    transform: scale(1.05);
+}
+
+#get-started {
+    background-color: beige;
+}
+
+#get-started:hover {
+    background-color:  rgb(127, 127, 118);;
+}
+
+#try-demo {
+    background-color: rgb(182, 175, 175);
+}
+
+#try-demo:hover {
+    background-color: rgb(200, 185, 185);
+}
+.services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.service {
+    width: 280px;
+    height: 180px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    background-color: beige;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.service-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.service-desc {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5;
+}
+
+.footer {
+    display: flex;
+    border-top: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px 0px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+    background-color: rgb(61, 58, 58);
+    color: white;
+}
+
+#image-logo {
+    display: flex;
+    justify-content: center;
+}
+.about-us img {
+    height: 75px;
+    width: 75px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.Social {
+    display: flex;
+    justify-content: center;
+}
+
+.Social > div > a > img {
+    height: 25px;
+    width: 25px;
+}
+
+.Social > div {
+    gap: 5px;
+}
+
+
+.About {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    padding-bottom: 48px;
+    border-bottom: 1px solid black;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-us > div {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.Company, .Industries, .Products , .Social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.Company a, .Industries a, .Products a, .Social a{
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+.address-parent {
+    width: 100%;
+    font-size: medium;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#copyright {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+@media (max-width: 768px) {
+   
+    .nav-toggle {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .links.active {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .hero {
+        width: 90%;
+        padding-top: 100px ;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .central-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .About {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-us {
+        grid-column: 1 / -1;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .address-parent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #copyright {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 40px 20px 0;
+    }
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark nav {
+    background-color: #555;
+}
+
+body.dark .nav-toggle {
+  color: #f0f0f0;
+}
+
+body.dark .links a {
+    color: white;
+}
+body.dark .service {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+body.dark .service-desc {
+  color: #aaaaaa;
+}
+
+body.dark #get-started {
+  background-color: #333;
+  border-color: #555;
+  color: #f0f0f0;
+}
+
+body.dark #get-started:hover {
+      background-color: #555;;
+}
+
+body.dark #try-demo {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #f0f0f0;
+}
+
+body.dark #try-demo:hover {
+    background-color: #555;
+}
+
+body.dark .nav-toggle:hover {
+    color:rgb(220, 213, 213)
+}
