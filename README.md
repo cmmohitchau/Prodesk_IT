@@ -1,0 +1,13 @@
+***Mission 1: The Corporate Brand (Week 1 Assignment)***
+<img width="1890" height="866" alt="Screenshot 2026-03-26 130631" src="https://github.com/user-attachments/assets/69fdaf48-ef42-4124-bbd2-bd8718269996" />
+<img width="1885" height="863" alt="Screenshot 2026-03-26 130652" src="https://github.com/user-attachments/assets/18df6539-7032-4796-9bb1-7a937098064d" />
+<img width="1899" height="561" alt="Screenshot 2026-03-26 130702" src="https://github.com/user-attachments/assets/e3d33805-5b9b-491d-b87c-51de306b841e" />
+<img width="1891" height="863" alt="Screenshot 2026-03-26 130857" src="https://github.com/user-attachments/assets/dbdce351-86b6-49c5-9ecc-2a9781c6092e" />
+<img width="1881" height="859" alt="Screenshot 2026-03-26 130909" src="https://github.com/user-attachments/assets/b07e7033-b74b-4d4f-a2b2-cf3e69802b23" />
+<img width="1913" height="571" alt="Screenshot 2026-03-26 130916" src="https://github.com/user-attachments/assets/7af647e0-39a5-4797-b143-fec557856708" />
+<img width="604" height="932" alt="Screenshot 2026-03-26 130934" src="https://github.com/user-attachments/assets/e8e9b0c2-bb60-4339-bc7b-93ba3d806f13" />
+<img width="618" height="934" alt="Screenshot 2026-03-26 130955" src="https://github.com/user-attachments/assets/ae22de6c-bfd6-4340-a5b5-f8b8e90bfafe" />
+<img width="635" height="938" alt="Screenshot 2026-03-26 131008" src="https://github.com/user-attachments/assets/cba396a8-e770-4da3-8241-d23cfd764a2b" />
+<img width="622" height="935" alt="Screenshot 2026-03-26 131016" src="https://github.com/user-attachments/assets/70132412-7b4e-4227-ad1b-fd9188e67fda" />
+<img width="634" height="937" alt="Screenshot 2026-03-26 131022" src="https://github.com/user-attachments/assets/be5ad182-1044-4512-9b8e-8f3287bf4c8a" />
+<img width="607" height="932" alt="Screenshot 2026-03-26 131035" src="https://github.com/user-attachments/assets/ac9eb78c-4cc6-4594-9afe-203e5929bfd4" />
