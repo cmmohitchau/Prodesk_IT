@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="expense">
+            <div id="form">
+                <div>
+                    <h3>Total Salary</h3>
+                    <input type="number" class="input-box" id="salary">
+                    <button class="btn" onclick="TotalSalary()">Enter</button>
+                </div>
+                <div>
+                    <h3>Expense Name</h3>
+                    <input type="text" class="input-box" id="expense-name" placeholder="Enter Expense Name">
+                </div>
+                <div>
+                    <h3>Expense Amount</h3>
+                    <input type="number" class="input-box" id="amount" placeholder="Enter Amount">
+                </div>
+                <button class="btn" onclick="addExpense()">Add Expense</button>
+                
+            </div>
+           <div id="expense-list">
+            <ul id="expense-list1">
+
+            </ul>
+            <div>
+                <h2 id="balance"></h2>
+            </div>
+            </div> 
+
+        </div>
+        <div class="chart" >
+            <canvas id="myChart"></canvas>
+        </div> 
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
