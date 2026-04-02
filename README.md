@@ -11,3 +11,10 @@
 <img width="622" height="935" alt="Screenshot 2026-03-26 131016" src="https://github.com/user-attachments/assets/70132412-7b4e-4227-ad1b-fd9188e67fda" />
 <img width="634" height="937" alt="Screenshot 2026-03-26 131022" src="https://github.com/user-attachments/assets/be5ad182-1044-4512-9b8e-8f3287bf4c8a" />
 <img width="607" height="932" alt="Screenshot 2026-03-26 131035" src="https://github.com/user-attachments/assets/ac9eb78c-4cc6-4594-9afe-203e5929bfd4" />
+
+***Mission 2: Logic & Data (Week 2 Assignment)***
+<img width="1908" height="869" alt="Screenshot 2026-04-02 221837" src="https://github.com/user-attachments/assets/34a9be5f-da3a-4a32-8045-2f3b0d82dad3" />
+<img width="615" height="556" alt="Screenshot 2026-04-02 221852" src="https://github.com/user-attachments/assets/3d900f62-f526-407c-be59-ecdc53b1cc6a" />
+<img width="600" height="532" alt="Screenshot 2026-04-02 221859" src="https://github.com/user-attachments/assets/d61bead2-d020-4b90-b5cd-fc5dd16562cc" />
+
+
