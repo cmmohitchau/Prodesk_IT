@@ -21,10 +21,7 @@ function TotalSalary() {
 
         document.getElementById("expense-list").prepend(salaryItem);
     } else {
-        const item = document.getElementById("totalAmount").textContent = `
-        <h1>Total Salary: ${salary} </h1>
-        `;
-        
+        document.getElementById("totalAmount").innerHTML = `<h1>Total Salary: ${Total}</h1>`;
     }
 
     document.getElementById("salary").value = "";
@@ -115,13 +112,13 @@ function renderExpenses() {
 function renderSalary() {
     if (!Total) return;
 
-    const item = document.createElement('div');
-    item.className = "TotalSalary";
-    item.id = "totalAmount";
+    salaryItem = document.createElement('div');
+    salaryItem.className = "TotalSalary";
+    salaryItem.id = "totalAmount";
 
-    item.innerHTML = `<h1>Total Salary: ${Total}</h1>`;
+    salaryItem.innerHTML = `<h1>Total Salary: ${Total}</h1>`;
 
-    document.getElementById("expense-list").prepend(item);
+    document.getElementById("expense-list").prepend(salaryItem);
 }
 
 Total = parseFloat(localStorage.getItem("total"));
