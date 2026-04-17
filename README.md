@@ -17,4 +17,8 @@
 <img width="615" height="556" alt="Screenshot 2026-04-02 221852" src="https://github.com/user-attachments/assets/3d900f62-f526-407c-be59-ecdc53b1cc6a" />
 <img width="600" height="532" alt="Screenshot 2026-04-02 221859" src="https://github.com/user-attachments/assets/d61bead2-d020-4b90-b5cd-fc5dd16562cc" />
 
+***Mission 4: The "AI Cover Letter Generator"***
+<img width="717" height="708" alt="Screenshot 2026-04-17 203024" src="https://github.com/user-attachments/assets/80831692-a207-4a70-8fd4-54fc84d5dd4c" />
+<img width="1897" height="523" alt="Screenshot 2026-04-17 203112" src="https://github.com/user-attachments/assets/ae9e769d-bc83-4dbc-a2b1-2a088669b0b3" />
+
 
