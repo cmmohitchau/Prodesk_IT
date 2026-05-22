@@ -22,3 +22,9 @@
 <img width="1897" height="523" alt="Screenshot 2026-04-17 203112" src="https://github.com/user-attachments/assets/ae9e769d-bc83-4dbc-a2b1-2a088669b0b3" />
 
 
+***Mission 7: Multi step Form***
+<img width="864" height="840" alt="Screenshot 2026-05-22 200542" src="https://github.com/user-attachments/assets/9d539d4c-4fab-42ed-a753-2a6bb481bb39" />
+<img width="794" height="771" alt="image" src="https://github.com/user-attachments/assets/866ecff0-e95a-4cf0-b89d-ebaba695ea97" />
+<img width="805" height="657" alt="image" src="https://github.com/user-attachments/assets/e76001ea-c613-4a55-9bba-bd4b6fa7f0f7" />
+
+
