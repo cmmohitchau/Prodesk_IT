@@ -21,7 +21,6 @@ export const AIChat = ({
     async function callModel(userPrompt : String) {
     try {
         setLoading(true);
-        setError(false);
 
         const res = await fetch(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent",
@@ -52,7 +51,6 @@ export const AIChat = ({
 
     } catch (e) {
         console.error(e);
-        setError(true);
     } finally {
         setLoading(false);
     }
