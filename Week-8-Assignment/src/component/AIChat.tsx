@@ -14,7 +14,6 @@ export const AIChat = ({
     onClose,
 } : AIChatProps) => {
     const [mood , setMood] = useState("");
-    const [response , setResponse] = useState("");
     const [loading , setLoading] = useState(false);
     const [error , setError] = useState(false);
 
@@ -49,7 +48,6 @@ export const AIChat = ({
         data.candidates?.[0]?.content?.parts?.[0]?.text ||
         "No response received";
 
-        setResponse(text);
         onMovieSuggestion(text.trim());
         onClose();
 
