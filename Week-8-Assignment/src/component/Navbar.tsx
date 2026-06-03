@@ -46,7 +46,7 @@ export const Navbar = () => {
         <div className="relative w-full h-24">
         
         <House onClick={() => navigate('/')} className="absolute top-1/2 left-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
-        <Heart onClick={() => navigate('/favourites')} className="absolute top-1/2 right-1 lg:right-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
+        <Heart fill="red" onClick={() => navigate('/favourites')} className="absolute text-red-500 top-1/2 right-1 lg:right-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
         <Search className="absolute top-1/2 right-1/8 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500" />
         <input onFocus={() => setShowDropDown(true)} onBlur={() => setShowDropDown(false)} onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search for movies..."
          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />

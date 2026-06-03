@@ -27,15 +27,13 @@ export const MovieDetail = () => {
             <h1 className="text-3xl mt-4 flex justify-center font-bold mb-4">Movie Detail</h1>
             {movie && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
-                    <img className="rounded-md cover w-1/2 mx-auto mb-4" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                    <img loading="lazy" className="rounded-md cover w-1/2 mx-auto mb-4" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                     <div className="gap-2 px-2 py-2 flex flex-col lg:justify-center rounded-full text-sm lg:text-lg">
                         <h2 className="text-lg font-bold">{movie.title}</h2>
                         <p className="text-gray-600">{movie.overview}</p>
                         <p className="text-green-700 font-bold">Release Date: {movie.release_date}</p>
                         <p className="text-yellow-500 font-bold">Rating: {movie.vote_average.toFixed(1)}</p>
-                        <p className=" font-bold">
-                            Add To Favourites: <Heart onClick={() => {}} className="inline-block w-5 h-5 text-red-500" />
-                        </p>
+                        
                     </div>
                 </div>
             )}

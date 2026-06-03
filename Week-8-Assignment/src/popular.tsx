@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Heart } from "lucide-react";
+import { useFavorites } from "./context/FavoriteContext";
+
 
 export interface Movie {
   id: number;
@@ -21,6 +23,12 @@ export const Popular = () => {
 
   const navigate = useNavigate();
   const observeRef = useRef<HTMLDivElement | null>(null);
+
+  const {
+  addFavorite,
+  removeFavorite,
+  isFavorite,
+} = useFavorites();
 
   const getData = async () => {
     if (loading || !hasMore) return;
@@ -100,37 +108,65 @@ export const Popular = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-4">
-        {movies.map((movie) => (
-          <div
-            key={movie.id}
-            onClick={() => navigate(`/movie/${movie.id}`)}
-            className="border rounded-md cursor-pointer hover:shadow-lg transition-shadow"
-          >
-            <img
-              className="rounded-t-md w-full"
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-            />
+        {movies.map((movie) => {
+  const favorite = isFavorite(movie.id);
 
-            <div className="px-2 py-2 text-sm">
-              <h2 className="text-lg font-bold">
-                {movie.title}
-              </h2>
+  return (
+    <div
+      key={movie.id}
+      onClick={() => navigate(`/movie/${movie.id}`)}
+      className="border rounded-md cursor-pointer hover:shadow-lg transition-shadow relative"
+    >
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
 
-              <p className="text-gray-600">
-                {movie.overview.slice(0, 100)}...
-              </p>
+          if (favorite) {
+            removeFavorite(movie.id);
+          } else {
+            addFavorite(movie);
+          }
+        }}
+        className="absolute top-3 right-3 z-10 bg-white rounded-full p-2 shadow-md"
+      >
+        <Heart
+          size={20}
+          fill={favorite ? "red" : "none"}
+          className={
+            favorite
+              ? "text-red-500"
+              : "text-gray-500"
+          }
+        />
+      </button>
 
-              <p className="text-green-700 font-bold">
-                Release Date: {movie.release_date}
-              </p>
+      <img
+        loading="lazy"
+        className="rounded-t-md w-full"
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        alt={movie.title}
+      />
 
-              <p className="text-yellow-500 font-bold">
-                Rating: {movie.vote_average.toFixed(1)}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="px-2 py-2 text-sm">
+        <h2 className="text-lg font-bold">
+          {movie.title}
+        </h2>
+
+        <p className="text-gray-600">
+          {movie.overview.slice(0, 100)}...
+        </p>
+
+        <p className="text-green-700 font-bold">
+          Release Date: {movie.release_date}
+        </p>
+
+        <p className="text-yellow-500 font-bold">
+          Rating: {movie.vote_average.toFixed(1)}
+        </p>
+      </div>
+    </div>
+  );
+})}
       </div>
 
       {loading && (
