@@ -1,18 +1,34 @@
 import { Search } from "lucide-react"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Movie } from "../popular";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { House , Heart } from 'lucide-react';
 
+interface NavbarProps {
+  searchText: string;
+  setSearchText: React.Dispatch<
+    React.SetStateAction<string>
+  >;
+}
 
-export const Navbar = () => {
+export const Navbar = ({
+  searchText,
+  setSearchText,
+} : NavbarProps) => {
 
   const [searchItem, setSearchItem] = useState<Movie[]>([]);
-  const [searchText, setSearchText] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
-  console.log("searchItem: ", searchItem);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+  if (searchText.trim()) {
+    inputRef.current?.focus();
+    setShowDropDown(true);
+  }
+}, [searchText]);
 
   useEffect(() => {
 
@@ -46,9 +62,9 @@ export const Navbar = () => {
         <div className="relative w-full h-24">
         
         <House onClick={() => navigate('/')} className="absolute top-1/2 left-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
-        <Heart fill="red" onClick={() => navigate('/favourites')} className="absolute text-red-500 top-1/2 right-1 lg:right-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
+        <Heart fill="red" onClick={() => navigate('/favourites')} className="absolute text-red-500 top-1/2 right-1 lg:right-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 cursor-pointer" />
         <Search className="absolute top-1/2 right-1/8 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500" />
-        <input onFocus={() => setShowDropDown(true)} onBlur={() => setShowDropDown(false)} onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search for movies..."
+        <input ref={inputRef} onFocus={() => setShowDropDown(true)} onBlur={() => setShowDropDown(false)} onChange={(e) => setSearchText(e.target.value)} value={searchText} type="text" placeholder="Search for movies..."
          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
             {showDropDown && searchItem.length > 0 && (
                 <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 mt-2 w-3/4 bg-white border border-gray-300 rounded-md shadow-lg z-10">

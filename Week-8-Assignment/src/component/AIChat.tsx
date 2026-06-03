@@ -1,13 +1,24 @@
 
 import { X } from "lucide-react"
 import { useState } from "react";
-export const AIChat = () => {
+
+interface AIChatProps {
+  onMovieSuggestion: (movie: string) => void;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const AIChat = ({
+    onMovieSuggestion,
+    isOpen,
+    onClose,
+} : AIChatProps) => {
     const [mood , setMood] = useState("");
     const [response , setResponse] = useState("");
     const [loading , setLoading] = useState(false);
     const [error , setError] = useState(false);
 
-    
+
 
     async function callModel(userPrompt : String) {
     try {
@@ -39,6 +50,8 @@ export const AIChat = () => {
         "No response received";
 
         setResponse(text);
+        onMovieSuggestion(text.trim());
+        onClose();
 
     } catch (e) {
         console.error(e);
@@ -67,18 +80,22 @@ export const AIChat = () => {
     callModel(prompt);
 
   };
+
+  if(!isOpen) return;
     
 
   return (
     <div className="fixed border rounded-2xl h-28 right-4 bottom-4 w-80 px-4 py-2 bg-white shadow-lg">
         <div className="flex justify-between">
             <p className="">How's Your Mood</p>
-            <X />
+            <button onClick={onClose}>
+                <X />
+            </button>
         </div>
 
         <input onChange={ (e) => setMood(e.target.value)} type="text" placeholder="I'll suggest you what to watch..."
          className="w-full absolute top-3/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <button  onClick={ () => alert(mood)} className="bg-blue-500 w-fit px-2 py-1 rounded-md absolute top-1/2 right-2">{loading ? "Finding" : "Find"}</button>
+        <button onClick={ handleSubmit} className="bg-blue-500 w-fit px-2 py-1 rounded-md absolute top-1/2 right-2">{loading ? "Finding" : "Find"}</button>
     </div>
   );
 }
