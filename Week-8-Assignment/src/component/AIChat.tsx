@@ -15,7 +15,6 @@ export const AIChat = ({
 } : AIChatProps) => {
     const [mood , setMood] = useState("");
     const [loading , setLoading] = useState(false);
-    const [error , setError] = useState(false);
 
 
 
