@@ -5,12 +5,13 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { userPrompt } = body;
 
+
     if (!userPrompt) {
       return NextResponse.json({ error: "Missing userPrompt" }, { status: 400 });
     }
 
     const res = await fetch(
-      "https://googleapis.com", 
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", 
       {
         method: "POST",
         headers: {
@@ -30,8 +31,10 @@ export async function POST(req: NextRequest) {
 
     const data = await res.json();
 
-    const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated";
+    console.log("data : " , data)
 
+    const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated";
+    console.log("aiText : " , aiText)
     return NextResponse.json({ answer: aiText });
 
   } catch (error: any) {

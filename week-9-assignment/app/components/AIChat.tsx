@@ -1,4 +1,4 @@
-
+"use client"
 import axios from "axios";
 import { X } from "lucide-react"
 import { useState } from "react";
@@ -17,19 +17,21 @@ export const AIChat = ({
     const [mood , setMood] = useState("");
     const [loading , setLoading] = useState(false);
 
-
-
-    async function callModel(userPrompt : String) {
+    async function callModel(userPrompt : string) {
     try {
         setLoading(true);
 
-        const res = await axios.post("http://localhost://3000/llmCcall" , {
-            data : userPrompt
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_SITE_URL}/api/llmCall`, {
+            userPrompt
         });
 
-        const data = await res.data();
+        const data = res.data;
+
+        console.log("data in fe : " , data)
 
         const text = data.answer;
+
+        console.log("text in fe : " , text)
 
         onMovieSuggestion(text.trim());
         onClose();

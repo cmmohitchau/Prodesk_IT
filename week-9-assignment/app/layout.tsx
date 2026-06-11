@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FavoritesProvider } from "./lib/movieContext";
 import { Navbar } from "./components/Navbar";
+import LayoutClient from "./components/LayoutClient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <FavoritesProvider>
-          <Navbar />
+          <LayoutClient>
           {children}
+          
+          </LayoutClient>
         </FavoritesProvider>
       </body>
     </html>

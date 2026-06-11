@@ -2,16 +2,24 @@
 
 import { Search } from "lucide-react"
 import { useEffect, useRef, useState } from "react";
-import axios from 'axios';
 import { House , Heart } from 'lucide-react';
 import { Movie } from "../ClientComponent";
 import { useRouter } from "next/navigation";
 import { searchMovie } from "../lib/searchMovie";
 
 
-export const Navbar = () => {
+interface NavbarProps {
+  searchText: string;
+  setSearchText: React.Dispatch<
+    React.SetStateAction<string>
+  >;
+}
 
-  const [searchText , setSearchText] = useState("");
+export const Navbar = ({
+  searchText,
+  setSearchText,
+} : NavbarProps) => {
+
   const [searchItem, setSearchItem] = useState<Movie[]>([]);
   const [showDropDown, setShowDropDown] = useState(false);
   const router = useRouter();
@@ -19,7 +27,7 @@ export const Navbar = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-  if (searchText.trim()) {
+  if (searchText.length > 0 && searchText.trim()) {
     inputRef.current?.focus();
     setShowDropDown(true);
   }
@@ -46,7 +54,7 @@ export const Navbar = () => {
   } , [searchText])
 
     return(
-        <div className="relative w-full h-24">
+      <div className="relative w-full h-24">
         
         <House onClick={() => router.push('/')} className="absolute top-1/2 left-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-gray-500 cursor-pointer" />
         <Heart fill="red" onClick={() => router.push('/favorites')} className="absolute text-red-500 top-1/2 right-1 lg:right-1/12 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 cursor-pointer" />
