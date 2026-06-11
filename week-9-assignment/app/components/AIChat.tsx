@@ -21,7 +21,7 @@ export const AIChat = ({
     try {
         setLoading(true);
 
-        const res = await axios.post(`${process.env.NEXT_PUBLIC_SITE_URL}/api/llmCall`, {
+        const res = await axios.post(`/api/llmCall`, {
             userPrompt
         });
 
